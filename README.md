@@ -1,4 +1,16 @@
 # TP00_Java
+
+Exercice 1 : 
+
+Enoncé : 
+
+ ![image](https://user-images.githubusercontent.com/29170620/136940588-6f7d3864-5d53-4170-a079-5a19ff9804dc.png)
+
+A partir des représentations géométriques ci-dessus, nous avons élaboré le diagramme de classes suivant :
+ ![image](https://user-images.githubusercontent.com/29170620/136940475-d4c5962f-9d55-4172-80d0-8826cb48527e.png)
+
+Considérer les règles métiers suivantes : 
+
 Considérer les règles métiers suivantes : 
 Tous les points doivent avoir une abscisse (x) et une ordonnée (y) supérieure ou égale à zéro
 -	Le déplacement d’un point (ou de la forme dont il est l’origine) consiste à changer son abscisse et son ordonnée ;
