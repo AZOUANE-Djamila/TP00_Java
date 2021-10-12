@@ -29,12 +29,12 @@ public class Programme {
 		
 		Point ps = Point.pointSaisi();
 		ps.afficher();
-//TODO deplacer & translate
+		//TODO deplacer & translate
 		Point p2= new Point(9,10);
 		p2.deplacer(5,0);
 		p2.afficher();
 		
-		//Carree
+		//Carre
 		System.out.println("_________________________________\n\n Créer un carré\n");
 		FormeGeometrique cf = new Carre();
 		Carre c = new Carre(ps,"Carre1",4);

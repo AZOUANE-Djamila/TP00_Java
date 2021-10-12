@@ -5,6 +5,7 @@ package model;
 import java.lang.Math;
 
 /**
+ * Cette classe représente un carré
  * @author AZOUANE DJAMILA
  *
  */
@@ -14,7 +15,8 @@ public class Carre extends FormeGeometrique {
 	
 	
 	/**
-	 * @return the longueur
+	 * Récupérer la longueur du carré
+	 * @return la longueur
 	 */
 	public int getLongueur() {
 		return longueur;
@@ -22,34 +24,51 @@ public class Carre extends FormeGeometrique {
 
 
 	/**
-	 * @param longueur the longueur to set
+	 * @param longueur à affecter
 	 */
 	public void setLongueur(int longueur) {
 		this.longueur = longueur;
 	}
 
-	// Constructeur pour Carre
+	/**
+	 * Constructeur Carre vide
+	 */
 	public Carre() {
 		super();
 		setOrigine(new Point());
 		setNom("Carre");
 	}
 
-	// Constructeur pour Carre avec les parametres
-	public Carre(Point origine, String nomC, int longueur) {
+	/**	
+	 * Constructeur Carre avec ses parametres en argument
+	 * 
+	 * @param origine
+	 * Point d'origine
+	 * @param nomC 
+	 * Ce parametre est hérité de la classe forme géométrique le nom de la forme géométrique ici il est = "Carré"
+	 * @param longueur
+	 * La longueur du carré
+	 */
+ 	public Carre(Point origine, String nomC, int longueur) {
 		super();
 		setOrigine(origine);
 		setNom(nomC);
 		setLongueur(longueur);
 	}
 
-
+	/**
+	  * Calculer et récupérer la superficie du carrée
+	  * @return sC la superficie du carrée
+	 */
 	@Override
 	public double superficie() {
-		return Math.pow(longueur,2);
+		double sC = Math.pow(longueur,2);//La formule mathématique =longueur^2
+		return sC; 
 	}
-
-
+	
+	/**
+	 * Redéfinir la classe toString() attribuée à la classe Carre
+	 */
 	@Override
 	public String toString() {
 		return "Carre  Nom = " + getNom() + "\n" + "Longueur =" + getLongueur() + "\n " + "La superficie de carre =" + superficie();

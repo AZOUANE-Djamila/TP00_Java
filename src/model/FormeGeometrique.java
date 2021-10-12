@@ -4,53 +4,80 @@
 package model;
 
 /**
+ * Représente une forme géométrique.
  * @author AZOUANE DJAMILA
  *
  */
 
 public abstract class FormeGeometrique {
 
-	public static double epaisseur;/*Définition d’une variable globale « épaisseur » de type entier qui indiquera 
-	l’épaisseur du trait des différente formes géométriques */
+	/**
+	 * Définition d’une variable globale « épaisseur » de type entier qui indiquera l’épaisseur du trait des différente formes géométriques
+	 */
+	public static double epaisseur;
 	
-	
+	/**
+	 * origine est le point d'origine d'une forme géométrique
+	 * nom est le nom de la forme géométrique
+	 */
 	private Point origine;
 	private String nom;
+	
 	/**
-	 * @return the origine
+	 * @return origine Récupérer le point d'origine de la forme géométrique 
 	 */
 	public Point getOrigine() {
 		return origine;
 	}
+	
 	/**
-	 * @param origine the origine to set
+	 * @param origine le point d'origine à mettre
 	 */
 	public void setOrigine(Point origine) {
 		this.origine = origine;
 	}
+	
+
 	/**
-	 * @return the nom
+	 * Récupérer le nom relatif à la forme géométrique
+	 * @return nom
 	 */
 	public String getNom() {
 		return nom;
 	}
+	
+	
 	/**
-	 * @param nom the nom to set
+	 * @param nom le nom à attribuer à la forme géométrique
 	 */
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
 	
-	//Déclarer la méthode superficie
-	public abstract double superficie();// Cette méthode va étre définie dans les classes filles
+
+	/**
+	 * Déclaration de la méthode superficie. Cette derniere va étre définie dans les classes filles
+	 * @return la superficie de la forme géométrique
+	 */
+	public abstract double superficie();
 	
+	/**
+	 * Comparer deux formes géométrique selon la superficie de chacune
+	 * @param fg 
+	 * La forme géométrique
+	 * @return false si les superficies des deux formes géométriques ne sont pas égaux
+	 * true si les superficies des deux formes géométriques sont égaux
+	 */
 	public boolean equals(FormeGeometrique fg) {
 		
 		return (superficie() == fg.superficie() );
 	}
 	
-	/*-	Définition d’une fonction permettant de doubler (multiplier fois 2) 
-	 * l’épaisseur des différentes formes géométriques
+	/**
+	 * Une méthode qui sert à doubler l'épaisseur d'une forme géométrique
+	 * @param FG
+	 * La forme géométrique
+	 * @return Le double d'épaisseur de la forme géométrique
 	 */
 	public double doubleEpaisseur(FormeGeometrique FG) {
 		return FG.epaisseur * 2;//Doubler l'épaisseur de la forme géométrique
