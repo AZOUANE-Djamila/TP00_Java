@@ -23,30 +23,70 @@ public class Programme {
 		// Programme principal
 		
 		Point p = new Point(1,2);
+		/**
+		 * Afficher le point p
+		 */
 		p.afficher();
+		
 		Point pm = new Point(4,5);
+		/**
+		 * Déplacer le point pm
+		 */
 		p.deplacer(pm);
-		//System.out.println(pm.toString());
+		/**
+		 * Affiche pm
+		 */
 		pm.afficher();
-		System.out.println(pm.equals(p));
+		
+		if(pm.equals(p)) {System.out.println("Les point sont égaux");}
+		else System.out.println("Les points ne sont pos égaux");
+		
 		
 		double epaisseurFG = Carre.epaisseur;
 		
 		Point ps = Point.pointSaisi();
 		ps.afficher();
 		//TODO deplacer & translate
+		/**
+		 * Déplacer et translater un point
+		 */
 		Point p2= new Point(9,10);
+		/**
+		 * Déplacer le point p2 aux courdpnnées (5,0)
+		 */
 		p2.deplacer(5,0);
+		/**
+		 * Afficher le point et ses coordonnées
+		 */
+		p2.afficher();
+		/**
+		 * Translater un point
+		 */
+		p2.translater(2, -1);
+		/**
+		 * Afficher le point et ses coordonnées aprés la translation
+		 */
 		p2.afficher();
 		
+		
 		//Carre
+		/**
+		 * Créer un carré
+		 */
 		System.out.println("_________________________________\n\n Créer un carré\n");
 		FormeGeometrique cf = new Carre();
 		Carre c = new Carre(ps,"Carre1",4);
 		
-		//Vérifier si les deux carrées cf & c sont égaux
+
+		/**
+		 * Vérifier si les deux carrées cf & c sont égaux
+		 */
 		if (c.equals(cf)) System.out.println("Les deux carrés cf & c sont égaux");
 		else System.out.println("Les deux carrés cf & c ne sont pas égaux");
+		
+		/**
+		 * Récupérer le nom de la forme géométrique
+		 */
 		System.out.println("Le nom de cette forme géométrique est "+ c.getNom());
 		System.out.println(c.toString());
 		
