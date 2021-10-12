@@ -14,6 +14,11 @@ import java.util.Scanner;
  */
 public class Programme {
 
+	/**
+	 * Programme principal
+	 * @param args
+	 * Default String array argument
+	 */
 	public static void main(String[] args) {
 		// Programme principal
 		

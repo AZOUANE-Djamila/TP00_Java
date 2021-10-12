@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"model","l":"Carre"},{"p":"model","l":"Cercle"},{"p":"model","l":"Cube"},{"p":"model","l":"FormeGeometrique"},{"p":"model","l":"Point"},{"p":"TP00","l":"Programme"},{"p":"model","l":"Rectangle"},{"p":"model","l":"Sphere"},{"p":"model","l":"Triangle"},{"p":"model","l":"TriangleEquilateral"},{"p":"model","l":"Trianglesocele"}];updateSearchResults();
+typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"TP00","l":"Programme"}];updateSearchResults();
