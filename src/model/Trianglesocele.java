@@ -70,10 +70,11 @@ public class Trianglesocele extends Triangle {
 	}
 
 	
+	//TODO Redéfinition de la méthode « toString » pour la classe TriangleIsocele
+
 	/**
 	 * @return la superficie du triangle Isocele
 	 */
-
 	@Override
 	public String toString() {
 		return "La superficie du Trianglesocele est" + superficie();

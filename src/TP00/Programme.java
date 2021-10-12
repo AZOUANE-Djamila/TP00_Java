@@ -12,6 +12,11 @@ import java.util.Scanner;
  * @author AZOUANE DJAMILA
  *
  */
+
+//TODO Documentation de toutes les classes développées ;
+//TODO Le code doit contenir toutes les classes, les attributs et les méthodes du diagramme ;
+//TODO Utilisation des trois (3) principes de l’orienté-objet ;
+
 public class Programme {
 
 	/**

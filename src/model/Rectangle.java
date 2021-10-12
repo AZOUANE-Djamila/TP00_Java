@@ -76,6 +76,7 @@ public class Rectangle extends Carre {
 		return sRect;
 	}
 
+	//TODO Redéfinition de la méthode « toString » pour la classe Rectangle
 	/**
 	 * Redéfinir la classe toString de la classe Rectangle
 	 */

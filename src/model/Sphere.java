@@ -41,6 +41,8 @@ public class Sphere extends Cercle {
 		return v;
 	}
 	
+	//TODO Redéfinition de la méthode « toString » pour la classe Sphere
+
 	/**
 	 * Redefinit la classe toString attribuée à la classe Sphere
 	 */

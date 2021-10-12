@@ -25,6 +25,8 @@ public class Carre extends FormeGeometrique {
 
 	/**
 	 * @param longueur à affecter
+	 * Attribuer l'argument longueur à this.longueur = Attribuez la valeur du paramètre "longueur" à la variable d'instance "longueur"
+	 * 'this' est utilisé pour désambiguïser les références de variables. 
 	 */
 	public void setLongueur(int longueur) {
 		this.longueur = longueur;
@@ -66,6 +68,7 @@ public class Carre extends FormeGeometrique {
 		return sC; 
 	}
 	
+	//TODO Redéfinition de la méthode « toString » pour toutes les classes non abstraites ;
 	/**
 	 * Redéfinir la classe toString() attribuée à la classe Carre
 	 */

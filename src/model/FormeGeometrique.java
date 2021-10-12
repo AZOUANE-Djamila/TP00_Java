@@ -32,6 +32,8 @@ public abstract class FormeGeometrique {
 	
 	/**
 	 * @param origine le point d'origine à mettre
+	 * Attribuer l'argument origine à this.x = Attribuez la valeur du paramètre "origine" à la variable d'instance "origine"
+	 * 'this' est utilisé pour désambiguïser les références de variables. 
 	 */
 	public void setOrigine(Point origine) {
 		this.origine = origine;
@@ -73,6 +75,7 @@ public abstract class FormeGeometrique {
 		return (superficie() == fg.superficie() );
 	}
 	
+	//TODO Définition d’une variable globale « épaisseur » de type entier qui indiquera l’épaisseur du trait des différente formes géométriques ;
 	/**
 	 * Une méthode qui sert à doubler l'épaisseur d'une forme géométrique
 	 * @param FG

@@ -46,7 +46,8 @@ public class TriangleEquilateral extends Triangle {
 		//Retourner l'arrondie de la superficie
 	}
 
-	
+	//TODO Redéfinition de la méthode « toString » pour la classe Triangle Equilateral
+
 	/**
 	 * @return la superficie du triangle equilateral
 	 */

@@ -27,6 +27,9 @@ public class Point  {
 	}
 	/**
 	 * @param x the x to set
+	 * Si le nombre est négatif afficher le message d'erreur "Le nombre n'est pas positif"
+	 * Sinon attribuer l'argument origine à this.x = Attribuez la valeur du paramètre "x" à la variable d'instance "x"
+	 * 'this' est utilisé pour désambiguïser les références de variables. 
 	 */
 	public void setX(int x) {
 		if (x < 0) 
@@ -49,6 +52,9 @@ public class Point  {
 	}
 	/**
 	 * @param y the y to set
+	 * Si y est négatif Afficher le message d'erreur "Le nombre n'est pas positif"
+	 * Sinon Attribuer l'argument origine à this.y = Attribuez la valeur du paramètre "y" à la variable d'instance "y"
+	 * 'this' est utilisé pour désambiguïser les références de variables. 
 	 */
 	public void setY(int y) {
 		if (y < 0) 
@@ -62,23 +68,28 @@ public class Point  {
 	 * Constructeur Point vide
 	 */
 	public Point() {
-		super();
 	}
 
+	//TODO Exemple d’utilisation du mot « this » avec un attribut et un constructeur ; (mettre une explication en commentaire)
 	/**
 	 * 
 	 * @param x
 	 * L'abscisse du point
 	 * @param y 
 	 * L'ordonné du point
+	 * 	Attribuer l'argument x à this.x = Attribuez la valeur du paramètre "x" à la variable d'instance "x"
+	 * 'this' est utilisé pour désambiguïser les références de variables. 
 	 */
 	public Point(int x, int y) {
-		super();
+		/**
+		 * Pour accéder aux attributs de la classe mère 
+		 */
 		this.x = x;
 		this.y = y;
 	}
 	
 	//Implémentation des méthodes
+	//TODO Redéfinition de la méthode « toString » pour la classe Point
 	/**
 	 * Redéfinir la méthode toString()
 	 */

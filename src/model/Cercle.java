@@ -24,6 +24,8 @@ public class Cercle extends FormeGeometrique {
 
 	/**
 	 * @param diametre the diametre to set
+	 * Attribuer l'argument diametre à this.diametre = Attribuez la valeur du paramètre "diametre" à la variable d'instance "diametre"
+	 * 'this' est utilisé pour désambiguïser les références de variables. 
 	 */
 	public void setDiametre(int diametre) {
 		this.diametre = diametre;
@@ -62,6 +64,9 @@ public class Cercle extends FormeGeometrique {
 		double rayon = getDiametre()/2;
 		return Math.round(Math.pow(rayon,2) * Math.PI);//Retourner l'arrondie de la superficie
 	}
+	
+	
+	//TODO Redéfinition de la méthode « toString » pour la classe Cercle
 
 	/**
 	 * Redéfinir la méthode toString attribuée à la classe Cercle
