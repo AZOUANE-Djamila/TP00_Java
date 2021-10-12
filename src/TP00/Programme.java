@@ -50,32 +50,66 @@ public class Programme {
 		System.out.println("Le nom de cette forme géométrique est "+ c.getNom());
 		System.out.println(c.toString());
 		
-		//Rectangle
-		System.out.println("_________________________________\n\n Créer un rectangle\n");
-		Rectangle rect = new Rectangle(ps, "RectangleCréé", 8, 4);
-		rect.afficher();
-		//Triangle Socele
+				/**
+				 * Créer un rectangle
+		 		*/
+				System.out.println("_________________________________\n\n Créer un rectangle\n");
+				Rectangle rect = new Rectangle(ps, "RectangleCréé", 8, 4);
+				/**
+		 		* Afficher les informations relatives au rectangle
+		 		*/
+				rect.afficher();
+				/**
+				 * Créer un rectangle
+				 */
 				System.out.println("_________________________________\n\n Créer un rectangle\n");
 				Trianglesocele trS = new Trianglesocele(ps, "TriangleSoceleCréé",7, 4);
+				/**
+				 * Afficher les informations relatives 
+				 */
 				trS.afficher();
-		//Triangle equilaterale
+
+				/**
+				 * Créer un triangle 
+				 */
 				TriangleEquilateral tEq = new TriangleEquilateral(ps, "TriangleEquilateraleCréé", 4,8);
+				/**
+				 * Afficher les informations relatives à un triangle 
+				 */
 				tEq.afficher();
 		
-		//Cercle
+				/**
+				 * Créer un cercle
+				 */
 				System.out.println("_________________________________\n\n Créer un cercle\n");
 				Cercle crcl = new Cercle(ps, "CercleCréé", 7);
+				/**
+				 * Afficher les informations relatives au cercle
+				 */
 				crcl.afficher();
 				
-		//Cube
+				/**
+				 * Créer un cube
+				 */
 				System.out.println("_________________________________\n\n Créer un cube\n");
 				Cercle cb = new Cercle(ps, "CubeCréé", 4);
+				/**
+				 * Afficher les informations relatives au cube
+				 */
 				cb.afficher();
 							
-		//Sphere
+				/**
+				 * Créer un sphére
+				 */
 				System.out.println("_________________________________\n\n Créer un sphere\n");
 				Cercle sph = new Sphere();
+				/**
+				 * Modifier la longueur du diamétere
+				 */
 				sph.setDiametre(8);//Indiquer la longeur du diametre
+				/**
+				 * Afficher les informations relatives au sphere
+				 */
 				sph.afficher();
 		
 	}
