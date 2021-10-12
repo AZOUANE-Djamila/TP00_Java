@@ -42,20 +42,25 @@ public class Programme {
 		 * Affiche pm
 		 */
 		pm.afficher();
-		
-		if(pm.equals(p)) {System.out.println("Les point sont égaux");}
-		else System.out.println("Les points ne sont pos égaux");
-		
+		if(pm.equals(p)) {System.out.println("Les points pm et p sont égaux");}
+		else System.out.println("Les points pm et p ne sont pos égaux");
+		System.out.println("____________________________________________________________________________________________________\n");
 		
 		double epaisseurFG = Carre.epaisseur;
-		
+		System.out.println("Saisir un point ps________________________________\n");
 		Point ps = Point.pointSaisi();
 		ps.afficher();
+		System.out.println("____________________________________________________________________________________________________\n");
+
 		//TODO deplacer & translate
+		System.out.println("Créer puis afficher les coordonnées point p2__________________________\n");
 		/**
 		 * Déplacer et translater un point
 		 */
 		Point p2= new Point(9,10);
+		p2.afficher();
+		System.out.println("\nDéplacer puis afficher les coordonnées de p2_____________________________\n");
+		
 		/**
 		 * Déplacer le point p2 aux courdpnnées (5,0)
 		 */
@@ -64,6 +69,8 @@ public class Programme {
 		 * Afficher le point et ses coordonnées
 		 */
 		p2.afficher();
+		System.out.println("____________________________________________________________________________________________________\n");
+		System.out.println("Translater puis afficher le point p2____________________________\n");
 		/**
 		 * Translater un point
 		 */
@@ -72,86 +79,108 @@ public class Programme {
 		 * Afficher le point et ses coordonnées aprés la translation
 		 */
 		p2.afficher();
-		
-		
+		System.out.println("____________________________________________________________________________________________________\n");
+
 		//Carre
 		/**
-		 * Créer un carré
-		 */
-		System.out.println("_________________________________\n\n Créer un carré\n");
+		 * Créer un carré 
+		 */		
+		System.out.println("Créer l'objet carré cf en utilisant la classe FormeGéométrique_________________________________\n");
 		FormeGeometrique cf = new Carre();
-		Carre c = new Carre(ps,"Carre1",4);
 		
+		System.out.println("Créer puis afficher l'objet carré c______________________________\n");
+		Carre c = new Carre(ps,"Carre1",4);
+		c.toString();
+		System.out.println(c.toString());
 
 		/**
 		 * Vérifier si les deux carrées cf & c sont égaux
 		 */
-		if (c.equals(cf)) System.out.println("Les deux carrés cf & c sont égaux");
-		else System.out.println("Les deux carrés cf & c ne sont pas égaux");
+		if (c.equals(cf)) System.out.println(" \nLes deux carrés cf & c sont égaux");
+		else System.out.println("\nLes deux carrés cf & c ne sont pas égaux");
 		
 		/**
 		 * Récupérer le nom de la forme géométrique
 		 */
+		System.out.println("\nLes informations relatives à l'objet c_____________________________");
 		System.out.println("Le nom de cette forme géométrique est "+ c.getNom());
 		System.out.println(c.toString());
 		
+		System.out.println("____________________________________________________________________________________________________\n");
+
 				/**
 				 * Créer un rectangle
 		 		*/
-				System.out.println("_________________________________\n\n Créer un rectangle\n");
 				Rectangle rect = new Rectangle(ps, "RectangleCréé", 8, 4);
+				
+				System.out.println("\nLes informations relatives à l'objet rect créé_____________________________");
+
 				/**
 		 		* Afficher les informations relatives au rectangle
 		 		*/
 				rect.afficher();
+				System.out.println("____________________________________________________________________________________________________\n");
 				/**
 				 * Créer un rectangle
 				 */
-				System.out.println("_________________________________\n\n Créer un rectangle\n");
-				TriangleIsocele trS = new TriangleIsocele(ps, "TriangleIsoceleCréé",7, 4);
+				TriangleIsocele trIs = new TriangleIsocele(ps, "TriangleIsoceleCréé",7, 4);
+				System.out.println("\nLes informations relatives à l'objet trIs créé_____________________________");
+
 				/**
 				 * Afficher les informations relatives 
 				 */
-				trS.afficher();
-
+				trIs.afficher();
+				System.out.println("____________________________________________________________________________________________________\n");
 				/**
 				 * Créer un triangle 
 				 */
 				TriangleEquilateral tEq = new TriangleEquilateral(ps, "TriangleEquilateraleCréé", 4,8);
+				
+				System.out.println("\nLes informations relatives à l'objet tEq_____________________________");
+
 				/**
 				 * Afficher les informations relatives à un triangle 
 				 */
 				tEq.afficher();
-		
+				
+				System.out.println("____________________________________________________________________________________________________\n");
+
 				/**
 				 * Créer un cercle
 				 */
-				System.out.println("_________________________________\n\n Créer un cercle\n");
 				Cercle crcl = new Cercle(ps, "CercleCréé", 7);
+				System.out.println("\nLes informations relatives à l'objet crcl Créé_____________________________");
+
 				/**
 				 * Afficher les informations relatives au cercle
 				 */
 				crcl.afficher();
 				
+				System.out.println("____________________________________________________________________________________________________\n");
+
 				/**
 				 * Créer un cube
 				 */
-				System.out.println("_________________________________\n\n Créer un cube\n");
 				Cercle cb = new Cercle(ps, "CubeCréé", 4);
+				System.out.println("\nLes informations relatives à l'objet cb créé_____________________________");
+
 				/**
 				 * Afficher les informations relatives au cube
 				 */
 				cb.afficher();
-							
+						
+				System.out.println("____________________________________________________________________________________________________\n");
+
 				/**
 				 * Créer un sphére
 				 */
-				System.out.println("_________________________________\n\n Créer un sphere\n");
 				Cercle sph = new Sphere();
 				/**
 				 * Modifier la longueur du diamétere
 				 */
 				sph.setDiametre(8);//Indiquer la longeur du diametre
+				System.out.println("\nLes informations relatives à l'objet sph créé_____________________________");
+
 				/**
 				 * Afficher les informations relatives au sphere
 				 */

@@ -42,15 +42,19 @@ public class Sphere extends Cercle {
 	}
 	
 	//TODO Redéfinition de la méthode « toString » pour la classe Sphere
-
 	/**
-	 * Redefinit la classe toString attribuée à la classe Sphere
+	 * Redéfinir la méthode toString attribué à la classe Sphere
 	 */
 	@Override
 	public String toString() {
-		return "La superficie du sphere =" + superficie() + "\n Le volume du sphere =" + volume();
+		return "Le nom du sphere est " + getNom() + "\nL'origine est " + getOrigine() + "\nLa taille du diametre " + getDiametre() +"\nLa superficie du Sphere est " + superficie() + "\nSon volume est " + volume();
+			
 	}
 	
-	
-	
+	/**
+	 * Afficher le contenu de toString
+	 */
+	public void afficher() {
+		System.out.println(this.toString());
+	}	
 }

@@ -77,14 +77,17 @@ public class TriangleIsocele extends Triangle {
 	 */
 	@Override
 	public String toString() {
-		return "La superficie du TriangleIsocele est" + superficie();
+		return "Le nom du triangle est "+ getNom() +"\nL'origine est "+ getOrigine() +" La taille de la base est " + getBase()+"\nLa taille du coté est "+ getCote() +"\nLa superficie est" + superficie();
 	}
-	
+
 	/**
 	 * Afficher la superficie du triangle Isocele
 	 */
 	public void afficher() {
 		System.out.println("La superficie du triangle socele"+toString());
 	}
+
+
+	
 	
 }

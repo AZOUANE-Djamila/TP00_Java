@@ -95,7 +95,7 @@ public class Point  {
 	 */
 	@Override
 	public String toString() {
-		return "Point [x=" + x + ", y=" + y + ", getX()=" + getX() + ", getY()=" + getY() + "]";
+		return "[x=" + getX()+", y=" + getY() + "]";
 	}
 	
 	/**
@@ -184,6 +184,6 @@ public class Point  {
 	 * Afficher le point et ses coordonnées
 	 */
 	public void afficher() {
-		System.out.println("Point = "+ this.toString());
+		System.out.println("Les coordonnées sont: "+ this.toString());
 	}
 }

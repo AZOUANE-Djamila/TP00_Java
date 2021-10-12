@@ -74,7 +74,7 @@ public class Carre extends FormeGeometrique {
 	 */
 	@Override
 	public String toString() {
-		return "Carre  Nom = " + getNom() + "\n" + "Longueur =" + getLongueur() + "\n " + "La superficie de carre =" + superficie();
+		return "Le nom du carré est " + getNom() + "\n" + "Longueur = " + getLongueur() + "\n" + "La superficie de carré = " + superficie();
 	}
 	
 	

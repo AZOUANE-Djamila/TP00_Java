@@ -52,8 +52,9 @@ public class TriangleEquilateral extends Triangle {
 	 * @return la superficie du triangle equilateral
 	 */
 	@Override
-	public String toString() {
-		return "La superficie de TriangleEquilateral nommé '"+getNom()+"' est" + superficie();
+	public String toString() { 
+		return "Le nom du triangle est " + getNom() + "\nLe point d'origine est " 
+	+ getOrigine() + "\nLa taille du coté est " + getCote() + "\nLa superficie est " + superficie();
 	}
 	
 	/**
@@ -62,6 +63,8 @@ public class TriangleEquilateral extends Triangle {
 	public void afficher() {
 		System.out.println("La superficie du triangle Equilateral"+toString());
 	}
+
+	
 	
 
 }
