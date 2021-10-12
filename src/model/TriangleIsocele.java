@@ -9,7 +9,7 @@ package model;
  * {@summary Un triangle isocèle est un triangle dont deux côté sont égaux. Le troisième côté est appelé la base} 
  */
 
-public class Trianglesocele extends Triangle {
+public class TriangleIsocele extends Triangle {
 	
 	private int base;
 	
@@ -34,7 +34,7 @@ public class Trianglesocele extends Triangle {
 	/**
 	 * Constructeur Triangle socele vide
 	 */
-	public Trianglesocele() {
+	public TriangleIsocele() {
 		super();
 		setOrigine(new Point());//setOrigine est hérité de la classe mere triangle
 		setNom("Triangle socele");//setNom sont hérités de la classe mere triangle
@@ -52,7 +52,7 @@ public class Trianglesocele extends Triangle {
 	 * @param base
 	 * La base du triangle Isocele
 	 */
-	public Trianglesocele(Point origine, String nomTs, int cote, int base) {
+	public TriangleIsocele(Point origine, String nomTs, int cote, int base) {
 		super(origine, nomTs, cote);//Les parametres sont hérités de la classe mere triangle
 		setOrigine(origine);
 		setNom(nomTs);
@@ -77,7 +77,7 @@ public class Trianglesocele extends Triangle {
 	 */
 	@Override
 	public String toString() {
-		return "La superficie du Trianglesocele est" + superficie();
+		return "La superficie du TriangleIsocele est" + superficie();
 	}
 	
 	/**

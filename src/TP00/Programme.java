@@ -108,7 +108,7 @@ public class Programme {
 				 * Créer un rectangle
 				 */
 				System.out.println("_________________________________\n\n Créer un rectangle\n");
-				Trianglesocele trS = new Trianglesocele(ps, "TriangleSoceleCréé",7, 4);
+				TriangleIsocele trS = new TriangleIsocele(ps, "TriangleIsoceleCréé",7, 4);
 				/**
 				 * Afficher les informations relatives 
 				 */
