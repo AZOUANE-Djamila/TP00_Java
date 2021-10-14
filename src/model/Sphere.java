@@ -54,7 +54,5 @@ public class Sphere extends Cercle {
 	/**
 	 * Afficher le contenu de toString
 	 */
-	public void afficher() {
-		System.out.println(this.toString());
-	}	
+	public void afficher() {System.out.println(this.toString());}	
 }
