@@ -21,6 +21,7 @@ public class Sphere extends Cercle {
 	
 	/**
 	  * @return sSph la superficie du sphere
+	  * sSph= 4 × π × R2
 	 */
 	
 	@Override
@@ -33,11 +34,11 @@ public class Sphere extends Cercle {
 	/**
 	 * 
 	 * @return v
-	 * Le volume du sphere
+	 * Le volume du sphere : V = 4/3πr³
 	 */
 	public final double volume() {
 		double rSph = getDiametre()/2;
-		double v = Math.round(4/3 * Math.PI * Math.pow(rSph,3));//Retourner l'arrondie de la superficie
+		double v = Math.round(4/3 * Math.PI * Math.pow(rSph,3));//Retourner l'arrondie du volume
 		return v;
 	}
 	
