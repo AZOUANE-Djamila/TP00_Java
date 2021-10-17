@@ -16,7 +16,6 @@ public class Sphere extends Cercle {
 	 */
 	public Sphere() {
 		super();
-		setNom("Sphere");
 	}
 	
 	/**
@@ -42,18 +41,19 @@ public class Sphere extends Cercle {
 		return v;
 	}
 	
-	//TODO Redéfinition de la méthode « toString » pour la classe Sphere
 	/**
 	 * Redéfinir la méthode toString attribué à la classe Sphere
 	 */
 	@Override
 	public String toString() {
-		return "Le nom du sphere est " + getNom() + "\nL'origine est " + getOrigine() + "\nLa taille du diametre " + getDiametre() +"\nLa superficie du Sphere est " + superficie() + "\nSon volume est " + volume();
-			
-	}
+		return String.format("Sphere [superficie=%s, volume=%s, Diametre=%s, Origine=%s, Nom=%s]",
+				superficie(), volume(), getDiametre(), getOrigine(), getNom());
+	}	
 	
 	/**
 	 * Afficher le contenu de toString
 	 */
-	public void afficher() {System.out.println(this.toString());}	
+	public void afficher() {System.out.println(this.toString());}
+
+	
 }

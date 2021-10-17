@@ -27,7 +27,12 @@ public class TriangleIsocele extends Triangle {
 	 * Remplacer la taille de la base par la base en argument
 	 */
 	public void setBase(int base) {
-		this.base = base;
+		if (base <= 0) 
+		      throw new ArithmeticException("La longueur de la base doit etre superieure à 0"); 
+		
+		else {
+	        	this.base = base;    	
+	        	}
 	}
 
 	
@@ -37,7 +42,6 @@ public class TriangleIsocele extends Triangle {
 	public TriangleIsocele() {
 		super();
 		setOrigine(new Point());//setOrigine est hérité de la classe mere triangle
-		setNom("Triangle socele");//setNom sont hérités de la classe mere triangle
 		setBase(base);
 	}
 
@@ -45,17 +49,14 @@ public class TriangleIsocele extends Triangle {
 	 * Constructeur Triangle socele avec ses parametres
 	 * @param origine
 	 * Relative à l'origine
-	 * @param nomTs
-	 * Ce parametre est hérité de la classe forme géométrique le nom de la forme géométrique ici il est = "TriangleIsocele"
 	 * @param cote
 	 * La taille du coté 
 	 * @param base
 	 * La base du triangle Isocele
 	 */
-	public TriangleIsocele(Point origine, String nomTs, int cote, int base) {
-		super(origine, nomTs, cote);//Les parametres sont hérités de la classe mere triangle
+	public TriangleIsocele(Point origine, int cote, int base) {
+		super(origine, cote);//Les parametres sont hérités de la classe mere triangle
 		setOrigine(origine);
-		setNom(nomTs);
 		setBase(base);
 		
 	}
@@ -70,15 +71,19 @@ public class TriangleIsocele extends Triangle {
 	}
 
 	
-	//TODO Redéfinition de la méthode « toString » pour la classe TriangleIsocele
 
 	/**
 	 * @return la superficie du triangle Isocele
 	 */
+	
+
 	@Override
 	public String toString() {
-		return "Le nom du triangle est "+ getNom() +"\nL'origine est "+ getOrigine() +" La taille de la base est " + getBase()+"\nLa taille du coté est "+ getCote() +"\nLa superficie est" + superficie();
+		return String.format(
+				"TriangleIsocele [Base=%s, superficie=%s, Cote=%s, Origine=%s, Nom()=%s]",
+				getBase(), superficie(), getCote(), getOrigine(), getNom());
 	}
+
 
 	/**
 	 * Afficher la superficie du triangle Isocele

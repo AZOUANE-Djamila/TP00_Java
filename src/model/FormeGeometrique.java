@@ -14,15 +14,13 @@ public abstract class FormeGeometrique {
 	/**
 	 * Définition d’une variable globale « épaisseur » de type entier qui indiquera l’épaisseur du trait des différente formes géométriques
 	 */
-	public static double epaisseur;
+	public static int EPAISSEUR = 1;
 	
 	/**
 	 * origine est le point d'origine d'une forme géométrique
 	 * nom est le nom de la forme géométrique
 	 */
 	private Point origine;
-	private String nom;
-	
 	/**
 	 * @return origine Récupérer le point d'origine de la forme géométrique 
 	 */
@@ -45,17 +43,35 @@ public abstract class FormeGeometrique {
 	 * @return nom
 	 */
 	public String getNom() {
-		return nom;
+		return this.getClass().getSimpleName();
 	}
 	
 	
 	/**
 	 * @param nom le nom à attribuer à la forme géométrique
 	 */
-	public void setNom(String nom) {
-		this.nom = nom;
+	public void setNom(FormeGeometrique fg) {
+		fg.getClass().getSimpleName();
 	}
 	
+	
+	/**
+	 * Constructeur avec tous les attribut d'une orme géométrique
+	 * @param origine Le point
+	 * @param nom Le nom de la forme géométrique
+	 */
+	public FormeGeometrique(Point origine) {
+		super();
+		setOrigine(origine);
+		setNom(this);
+	}
+	
+	/**
+	 * Constructeur forme géométrique vide
+	 */
+	public FormeGeometrique() {
+		super();
+	}
 
 	/**
 	 * Déclaration de la méthode superficie. Cette derniere va étre définie dans les classes filles
@@ -63,27 +79,27 @@ public abstract class FormeGeometrique {
 	 */
 	public abstract double superficie();
 	
+
 	/**
-	 * Comparer deux formes géométrique selon la superficie de chacune
-	 * @param fg 
-	 * La forme géométrique
-	 * @return false si les superficies des deux formes géométriques ne sont pas égaux
-	 * true si les superficies des deux formes géométriques sont égaux
+	 * redéfinir la méthode equals
 	 */
-	public boolean equals(FormeGeometrique fg) {
-		
-		return (superficie() == fg.superficie() );
-	}
-	
-	//TODO Définition d’une variable globale « épaisseur » de type entier qui indiquera l’épaisseur du trait des différente formes géométriques ;
+	@Override  	//overriding equals() method  
+	public boolean equals(Object o)   
+	{  
+		if (o == null)  return false;  
+		if (o == this)return true;  
+		return this.superficie() == ((FormeGeometrique) o).superficie();  
+	}  
+
+
 	/**
 	 * Une méthode qui sert à doubler l'épaisseur d'une forme géométrique
 	 * @param FG
 	 * La forme géométrique
 	 * @return Le double d'épaisseur de la forme géométrique
 	 */
-	public double doubleEpaisseur(FormeGeometrique FG) {
-		return FG.epaisseur * 2;//Doubler l'épaisseur de la forme géométrique
+	public static double doubleEpaisseur(FormeGeometrique FG) {
+		return FormeGeometrique.EPAISSEUR * 2;//Doubler l'épaisseur de la forme géométrique
 	}
 	
 }

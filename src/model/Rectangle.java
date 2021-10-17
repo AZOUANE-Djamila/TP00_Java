@@ -12,7 +12,7 @@ public class Rectangle extends Carre {
 	/**
 	 * largeur est la largeur du Rectangle
 	 */
-	public double largeur;
+	protected double largeur;
 
 	/**
 	 * @return the largeur
@@ -25,7 +25,12 @@ public class Rectangle extends Carre {
 	 * @param largeur the largeur to set
 	 */
 	public void setLargeur(double largeur) {
-		this.largeur = largeur;
+		if (largeur <= 0) 
+		      throw new ArithmeticException("La largeur doit etre superieure à 0"); 
+		
+		else {
+	        	this.largeur = largeur;    	
+	        	}
 	}
 
 	/**
@@ -34,7 +39,6 @@ public class Rectangle extends Carre {
 	public Rectangle() {
 		super();
 		setOrigine(new Point());
-		setNom("Rectangle");
 		setLargeur(largeur);
 	}
 
@@ -49,10 +53,8 @@ public class Rectangle extends Carre {
 	 * @param longueur
 	 * La longueur du rectangle hérité de la classe Carre
 	 */
-	public Rectangle(Point origine, String nomR, int largeur, int longueur) {
-		super(origine, nomR, longueur);
-		setOrigine(origine);
-		setNom(nomR);
+	public Rectangle(Point origine, int largeur, int longueur) {
+		super(origine, longueur);
 		setLargeur(largeur);
 	}
 
@@ -76,13 +78,14 @@ public class Rectangle extends Carre {
 		return sRect;
 	}
 
-	//TODO Redéfinition de la méthode « toString » pour la classe Rectangle
 	/**
 	 * Redéfinir la classe toString de la classe Rectangle
 	 */
 	@Override
 	public String toString() {
-		return "La superficie du réctangle '"+ getNom() +"' est " + superficie();
+		return String.format(
+				"Rectangle [Largeur=%s, Superficie=%s, Longueur=%s, Origine=%s, Nom=%s]",
+				getLargeur(), superficie(), getLongueur(), getOrigine(), getNom());
 	}
 
 	/**
@@ -91,5 +94,7 @@ public class Rectangle extends Carre {
 	public void afficher() {
 		System.out.println(this.toString());
 	}
+
+	
 	
 }

@@ -28,7 +28,12 @@ public class Cercle extends FormeGeometrique {
 	 * 'this' est utilisé pour désambiguïser les références de variables. 
 	 */
 	public void setDiametre(int diametre) {
-		this.diametre = diametre;
+		if (diametre <= 0) 
+		      throw new ArithmeticException("La longueur du diametre doit etre superieure à 0"); 
+		
+		else {
+	        	this.diametre = diametre;    	
+	        	}
 	}
 
 	/**
@@ -37,22 +42,17 @@ public class Cercle extends FormeGeometrique {
 	public Cercle() {
 		super();
 		setOrigine(new Point());
-		setNom("Cercle");
 	}
 
 	/**
 	 * 
 	 * @param origine
 	 * Le point d'origine de la classe Cercle
-	 * @param nomC
-	 * Ce parametre est hérité de la classe forme géométrique le nom de la forme géométrique ici il est = "Cercle"
 	 * @param diametre
 	 * Diametre du cercle 
 	 */
-	public Cercle(Point origine, String nomC, int diametre) {
-		super();
-		setOrigine(origine);
-		setNom(nomC);
+	public Cercle(Point origine, int diametre) {
+		super(origine);
 		setDiametre(diametre);
 	}
 
@@ -66,14 +66,15 @@ public class Cercle extends FormeGeometrique {
 	}
 	
 	
-	//TODO Redéfinition de la méthode « toString » pour la classe Cercle
+	// Redéfinition de la méthode « toString » pour la classe Cercle
 
 	/**
 	 * Redéfinir la méthode toString attribuée à la classe Cercle
 	 */
 	@Override
 	public String toString() {
-		return "La superficie  du '"+ getNom()+"'" + superficie();
+		return String.format("Cercle [Diametre=%s, Superficie=%s, Origine=%s, Nom=%s]", getDiametre(),
+				superficie(), getOrigine(), getNom());
 	}
 	
 	/**

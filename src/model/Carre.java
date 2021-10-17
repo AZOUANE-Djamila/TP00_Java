@@ -11,7 +11,7 @@ import java.lang.Math;
  */
 public class Carre extends FormeGeometrique {
 	
-	private int longueur;
+	protected int longueur;
 	
 	
 	/**
@@ -29,32 +29,33 @@ public class Carre extends FormeGeometrique {
 	 * 'this' est utilisé pour désambiguïser les références de variables. 
 	 */
 	public void setLongueur(int longueur) {
-		this.longueur = longueur;
+		if (longueur <= 0) 
+		      throw new ArithmeticException("La longueur doit etre superieure à 0"); 
+		
+		else {
+	        	this.longueur = longueur;    	
+	        	}
 	}
 
+	
 	/**
 	 * Constructeur Carre vide
 	 */
 	public Carre() {
 		super();
-		setOrigine(new Point());
-		setNom("Carre");
 	}
+
 
 	/**	
 	 * Constructeur Carre avec ses parametres en argument
 	 * 
 	 * @param origine
 	 * Point d'origine
-	 * @param nomC 
-	 * Ce parametre est hérité de la classe forme géométrique le nom de la forme géométrique ici il est = "Carré"
 	 * @param longueur
 	 * La longueur du carré
 	 */
- 	public Carre(Point origine, String nomC, int longueur) {
-		super();
-		setOrigine(origine);
-		setNom(nomC);
+ 	public Carre(Point origine, int longueur) {
+		super(origine);//Les attribut hérités de la classe mere
 		setLongueur(longueur);
 	}
 
@@ -67,15 +68,19 @@ public class Carre extends FormeGeometrique {
 		double sC = Math.pow(longueur,2);//La formule mathématique =longueur^2
 		return sC; 
 	}
-	
-	//TODO Redéfinition de la méthode « toString » pour toutes les classes non abstraites ;
-	/**
-	 * Redéfinir la classe toString() attribuée à la classe Carre
-	 */
+
+	// Redéfinition de la méthode « toString » pour toutes les classes non abstraites ;
+		/**
+		 * Redéfinir la classe toString() attribuée à la classe Carre
+		 */
 	@Override
 	public String toString() {
-		return "Le nom du carré est " + getNom() + "\n" + "Longueur = " + getLongueur() + "\n" + "La superficie de carré = " + superficie();
+		return String.format("Carre [Longueur=%s, Superficie=%s, Origine=%s, Nom=%s]", getLongueur(),
+				superficie(), getOrigine(), getNom());
 	}
+	
+	
+	
 	
 	
 }

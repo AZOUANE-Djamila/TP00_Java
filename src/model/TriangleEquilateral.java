@@ -10,31 +10,23 @@ package model;
 
  */
 public class TriangleEquilateral extends Triangle {
-	
+	//TODO 	vérifier les régles métier
 	/**
 	 * Constructeur TriangleEquilateral vide
 	 */
 	public TriangleEquilateral() {
 		super();
-		setOrigine(new Point());//setOrigine est hérité de la classe mere triangle
-		setNom("Triangle Equilateral"); //setNom sont hérités de la classe mere triangle
 	}
 
 	/**
 	 * 
 	 * @param origine
 	 * L'origine point 
-	 * @param nomTs
-	 * Ce parametre est hérité de la classe forme géométrique le nom de la forme géométrique ici il est = "TriangleEquilateral"
 	 * @param cote
 	 * La taille du coté
-	 * @param base
-	 * La taille de la base du triangle Equilateral
 	 */
-	public TriangleEquilateral(Point origine, String nomTs, int cote, int base) {
-		super(origine, nomTs, cote);
-		setOrigine(origine);//setOrigine est hérité de la classe mere triangle
-		setNom(nomTs);		//setNom sont hérités de la classe mere triangle
+	public TriangleEquilateral(Point origine, int cote) {
+		super(origine, cote);//Origine et cote sont hérités de la classe mere triangle
 	}
 
 	/**
@@ -46,17 +38,18 @@ public class TriangleEquilateral extends Triangle {
 		//Retourner l'arrondie de la superficie
 	}
 
-	//TODO Redéfinition de la méthode « toString » pour la classe Triangle Equilateral
 
 	/**
 	 * @return la superficie du triangle equilateral
 	 */
-	@Override
-	public String toString() { 
-		return "Le nom du triangle est " + getNom() + "\nLe point d'origine est " 
-	+ getOrigine() + "\nLa taille du coté est " + getCote() + "\nLa superficie est " + superficie();
-	}
 	
+	
+	@Override
+	public String toString() {
+		return String.format("TriangleEquilateral [Superficie=%s, Cote=%s, Origine=%s, Nom=%s]",
+				superficie(), getCote(), getOrigine(), getNom());
+	}
+
 	/**
 	 * Afficher la superficie du triangle Equilateral
 	 */

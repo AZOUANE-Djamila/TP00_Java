@@ -2,20 +2,14 @@
  * 
  */
 package TP00;
-import java.util.stream.Collectors;
 
 import model.*;
-
-import java.util.Scanner;
 
 /**
  * @author AZOUANE DJAMILA
  *
  */
 
-//TODO Documentation de toutes les classes développées ;
-//TODO Le code doit contenir toutes les classes, les attributs et les méthodes du diagramme ;
-//TODO Utilisation des trois (3) principes de l’orienté-objet ;
 
 public class Programme {
 
@@ -46,25 +40,26 @@ public class Programme {
 		else System.out.println("Les points pm et p ne sont pos égaux");
 		System.out.println("____________________________________________________________________________________________________\n");
 		
-		double epaisseurFG = Carre.epaisseur;
 		System.out.println("Saisir un point ps________________________________\n");
 		Point ps = Point.pointSaisi();
 		ps.afficher();
 		System.out.println("____________________________________________________________________________________________________\n");
 
-		//TODO deplacer & translate
+		// deplacer & translate
 		System.out.println("Créer puis afficher les coordonnées point p2__________________________\n");
+		
 		/**
 		 * Déplacer et translater un point
 		 */
 		Point p2= new Point(9,10);
-		p2.afficher();
+		System.out.println("p2 avant le déplacement: "+p2);
+		
 		System.out.println("\nDéplacer puis afficher les coordonnées de p2_____________________________\n");
 		
 		/**
 		 * Déplacer le point p2 aux courdpnnées (5,0)
 		 */
-		p2.deplacer(5,0);
+		p2.deplacer(5,4);
 		/**
 		 * Afficher le point et ses coordonnées
 		 */
@@ -86,18 +81,24 @@ public class Programme {
 		 * Créer un carré 
 		 */		
 		System.out.println("Créer l'objet carré cf en utilisant la classe FormeGéométrique_________________________________\n");
-		FormeGeometrique cf = new Carre();
+		FormeGeometrique cf = new Carre(p2,6);
+		System.out.println("cf = "+cf);
 		
 		System.out.println("Créer puis afficher l'objet carré c______________________________\n");
-		Carre c = new Carre(ps,"Carre1",4);
-		c.toString();
-		System.out.println(c.toString());
+		Carre c = new Carre(ps,4);
+		System.out.println("c = "+c.toString());
 
 		/**
 		 * Vérifier si les deux carrées cf & c sont égaux
 		 */
 		if (c.equals(cf)) System.out.println(" \nLes deux carrés cf & c sont égaux");
 		else System.out.println("\nLes deux carrés cf & c ne sont pas égaux");
+		
+		Carre carre= new Carre(pm,3);
+		double epaisseurFG = Carre.EPAISSEUR;
+		System.out.println("L'épaisseur du carré est: "+epaisseurFG);
+		double doubleEpaisseurFG = Carre.doubleEpaisseur(carre);
+		System.out.println("L'épaisseur du carré est: "+doubleEpaisseurFG);
 		
 		/**
 		 * Récupérer le nom de la forme géométrique
@@ -111,7 +112,7 @@ public class Programme {
 				/**
 				 * Créer un rectangle
 		 		*/
-				Rectangle rect = new Rectangle(ps, "RectangleCréé", 8, 4);
+				Rectangle rect = new Rectangle(ps, 8, 4);
 				
 				System.out.println("\nLes informations relatives à l'objet rect créé_____________________________");
 
@@ -123,7 +124,7 @@ public class Programme {
 				/**
 				 * Créer un rectangle
 				 */
-				TriangleIsocele trIs = new TriangleIsocele(ps, "TriangleIsoceleCréé",7, 4);
+				TriangleIsocele trIs = new TriangleIsocele(ps,7, 4);
 				System.out.println("\nLes informations relatives à l'objet trIs créé_____________________________");
 
 				/**
@@ -134,7 +135,7 @@ public class Programme {
 				/**
 				 * Créer un triangle 
 				 */
-				TriangleEquilateral tEq = new TriangleEquilateral(ps, "TriangleEquilateraleCréé", 4,8);
+				TriangleEquilateral tEq = new TriangleEquilateral(p,8);
 				
 				System.out.println("\nLes informations relatives à l'objet tEq_____________________________");
 
@@ -148,7 +149,7 @@ public class Programme {
 				/**
 				 * Créer un cercle
 				 */
-				Cercle crcl = new Cercle(ps, "CercleCréé", 7);
+				Cercle crcl = new Cercle(ps, 7);
 				System.out.println("\nLes informations relatives à l'objet crcl Créé_____________________________");
 
 				/**
@@ -161,7 +162,7 @@ public class Programme {
 				/**
 				 * Créer un cube
 				 */
-				Cercle cb = new Cercle(ps, "CubeCréé", 4);
+				Cercle cb = new Cercle(ps, 4);
 				System.out.println("\nLes informations relatives à l'objet cb créé_____________________________");
 
 				/**

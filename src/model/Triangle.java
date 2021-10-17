@@ -2,7 +2,6 @@
  * 
  */
 package model;
-import java.lang.Math;
 
 /**
  * Représente un triangle
@@ -28,7 +27,12 @@ public abstract class Triangle extends FormeGeometrique {
 	 * @param cote la taille du coté à mettre
 	 */
 	public void setCote(int cote) {
-		this.cote = cote;
+		if (cote <= 0) 
+		      throw new ArithmeticException("La longueur du cote doit etre superieure à 0"); 
+		
+		else {
+	        	this.cote = cote;    	
+	        	}
 	}
 
 	/**
@@ -36,31 +40,18 @@ public abstract class Triangle extends FormeGeometrique {
 	 */
 	public Triangle() {
 		super();
-		setOrigine(new Point());
-		setNom("Triangle");
 	}
 
 	/**
 	 * Constructeur Triangle avec des parametres en argument
 	 * @param origine
 	 * Le point d'origine du traingle, il a été hérité de la classe forme géométrique
-	 * @param nomC
-	 * nomC est hérité de la classe géométrique ici il est = "Triangle"
 	 * @param cote
 	 * Un côté de l'angle droit est soit opposé, soit adjacent à l'un des angles aigus du triangle.
 	 */
-	public Triangle(Point origine, String nomC, int cote) {
-		super();
-		setOrigine(origine);
-		setNom(nomC);
+	public Triangle(Point origine,int cote) {
+		super(origine);
 		setCote(cote);
 	}
-
-	/**
-	  * @return Retourne la superficie du traiangle
-	 */
-	@Override
-	public abstract double superficie();//Déclarer la superficie du triangle comme méthode abstract
-	
 	
 }
