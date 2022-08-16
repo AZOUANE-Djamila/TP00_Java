@@ -27,6 +27,8 @@ public class TriangleEquilateral extends Triangle {
 	 */
 	public TriangleEquilateral(Point origine, int cote) {
 		super(origine, cote);//Origine et cote sont hérités de la classe mere triangle
+		this.setOrigine(origine);
+		this.setCote(cote);
 	}
 
 	/**
@@ -34,7 +36,7 @@ public class TriangleEquilateral extends Triangle {
 	 */
 	@Override
 	public double superficie() {
-		return Math.round( Math.sqrt(3)/4 ) * getCote();//Formule de la superficie = √ 3/4 *cote
+		return Math.round(( Math.sqrt(3)/4 ) * Math.pow(getCote(),2));//Formule de la superficie = √ 3/4 *cote^2
 		//Retourner l'arrondie de la superficie
 	}
 
@@ -54,7 +56,7 @@ public class TriangleEquilateral extends Triangle {
 	 * Afficher la superficie du triangle Equilateral
 	 */
 	public void afficher() {
-		System.out.println("La superficie du triangle Equilateral"+toString());
+		System.out.println("La superficie du triangle Equilateral"+superficie());
 	}
 
 	
