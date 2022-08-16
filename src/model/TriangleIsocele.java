@@ -4,15 +4,14 @@
 package model;
 
 /** 
- * Représente un triangle isocèle. un triangle isocèle est un triangle ayant au moins deux côtés de même longueur.
+ * ReprÃ©sente un triangle isocÃ¨le. un triangle isocÃ¨le est un triangle ayant au moins deux cÃ´tÃ©s de mÃªme longueur.
  * @author AZOUANE DJAMILA
- * {@summary Un triangle isocèle est un triangle dont deux côté sont égaux. Le troisième côté est appelé la base} 
+ * {@summary Un triangle isocÃ¨le est un triangle dont deux cÃ´tÃ© sont Ã©gaux. Le troisiÃ¨me cÃ´tÃ© est appelÃ© la base} 
  */
 
 public class TriangleIsocele extends Triangle {
 	
 	private int base;
-	
 	
 	/**
 	 * @return la base du triangle isocele
@@ -28,7 +27,7 @@ public class TriangleIsocele extends Triangle {
 	 */
 	public void setBase(int base) {
 		if (base <= 0) 
-		      throw new ArithmeticException("La longueur de la base doit etre superieure à 0"); 
+		      throw new ArithmeticException("La longueur de la base doit etre superieure Ã  0"); 
 		
 		else {
 	        	this.base = base;    	
@@ -41,23 +40,21 @@ public class TriangleIsocele extends Triangle {
 	 */
 	public TriangleIsocele() {
 		super();
-		setOrigine(new Point());//setOrigine est hérité de la classe mere triangle
-		setBase(base);
+		this.setBase(base);
 	}
 
 	/**
 	 * Constructeur Triangle socele avec ses parametres
 	 * @param origine
-	 * Relative à l'origine
+	 * Relative Ã  l'origine
 	 * @param cote
-	 * La taille du coté 
+	 * La taille du cotÃ© 
 	 * @param base
 	 * La base du triangle Isocele
 	 */
 	public TriangleIsocele(Point origine, int cote, int base) {
-		super(origine, cote);//Les parametres sont hérités de la classe mere triangle
-		setOrigine(origine);
-		setBase(base);
+		super(origine, cote);//Les parametres sont hÃ©ritÃ©s de la classe mere triangle
+		this.setBase(base);
 		
 	}
 
@@ -67,7 +64,8 @@ public class TriangleIsocele extends Triangle {
 	 */
 	@Override
 	public double superficie() {
-		return Math.round(1/2 * getBase() * getCote());//Retourner l'arrondie de la superficie
+		return 0.5 * getBase() * getCote();
+		//Retourner l'arrondie de la superficie
 	}
 
 	
@@ -89,7 +87,7 @@ public class TriangleIsocele extends Triangle {
 	 * Afficher la superficie du triangle Isocele
 	 */
 	public void afficher() {
-		System.out.println("La superficie du triangle socele"+toString());
+		System.out.println("La superficie du triangle Isocele"+superficie());
 	}
 
 
